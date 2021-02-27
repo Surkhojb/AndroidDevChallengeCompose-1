@@ -17,7 +17,7 @@ package com.example.androiddevchallenge
 
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.surkhojb.ktpuppy.MainActivity
+import com.surkhojb.ktpuppy.ui.MainActivity
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

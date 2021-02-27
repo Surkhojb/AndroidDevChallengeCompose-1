@@ -11,23 +11,29 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androiddevchallenge">
+    package="com.surkhojb.ktpuppy">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDevChallenge">
         <activity
-            android:name="com.example.androiddevchallenge.com.surkhoj.androiddevchallenge.MainActivity"
+            android:name="com.surkhojb.ktpuppy.ui.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AndroidDevChallenge.NoActionBar">
+            android:theme="@style/Theme.AndroidDevChallenge">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.surkhojb.ktpuppy.ui.detail.DetailActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AndroidDevChallenge.NoActionBar">
         </activity>
     </application>
 
