@@ -28,7 +28,7 @@ import dev.chrisbanes.accompanist.glide.GlideImage
 
 @ExperimentalFoundationApi
 @Composable
-private fun PuppyList(
+fun PuppyList(
     puppies: List<Puppy>,
     modifier: Modifier = Modifier
 ) {
@@ -96,7 +96,13 @@ private fun PuppySection(
     section: String,
     puppies: List<Puppy>
 ) {
+
     Column(modifier = Modifier.background(Color.White)) {
+        Text(
+            modifier = Modifier.padding(16.dp),
+            text = section,
+            style = MaterialTheme.typography.subtitle1
+        )
         LazyRow(modifier = Modifier.padding(end = 8.dp)) {
             items(puppies) { puppy ->
                 PuppyCard(puppy, Modifier.padding(start = 16.dp))

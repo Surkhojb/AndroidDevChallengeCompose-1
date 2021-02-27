@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.surkhojb.ktpuppy.data.PuppyRepository
+import com.surkhojb.ktpuppy.ui.components.PuppyList
 import com.surkhojb.ktpuppy.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {

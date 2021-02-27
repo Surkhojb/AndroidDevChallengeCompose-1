@@ -56,7 +56,7 @@ object PuppyRepository {
             "https://www.heroesde4patas.org/perro/nora/"
         ),
         Puppy(12345,
-            "More vet dogs...",
+            "More dogs",
             breed = HERO,
             contactUrl = "https://www.heroesde4patas.org"
         )
@@ -108,7 +108,7 @@ object PuppyRepository {
             "http://chuchos-gr.org/ficha-1426"
         ),
         Puppy(678910,
-            "More dogs...",
+            "More dogs",
             breed = SOME_RODEOS,
             contactUrl = "http://chuchos-gr.org"
         )
@@ -160,7 +160,7 @@ object PuppyRepository {
             "https://www.kiwokoadopta.org/en-adopcion/perros/madrid/mestizo/19085-oliva"
         ),
         Puppy(1112131415,
-            "More cute doggies...",
+            "More dogs",
             breed = NEWBIE,
             contactUrl = "https://www.kiwokoadopta.org/en-adopcion/perros"
         )
