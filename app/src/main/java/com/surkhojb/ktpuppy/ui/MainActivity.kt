@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                Surface(){
-                    PuppyList(PuppyRepository.getAll()){
-                        when(it.id){
-                            12345L,678910L,1112131415L -> { this.openUrl(it.contactUrl.toString())}
-                            else -> { navigateToDetail(it)}
+                Surface() {
+                    PuppyList(PuppyRepository.getAll()) {
+                        when (it.id) {
+                            12345L, 678910L, 1112131415L -> { this.openUrl(it.contactUrl.toString()) }
+                            else -> { navigateToDetail(it) }
                         }
                     }
                 }
@@ -48,9 +48,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun navigateToDetail(puppy: Puppy){
+    private fun navigateToDetail(puppy: Puppy) {
         val bundle = Bundle()
         bundle.putSerializable("puppy_key", puppy)
-        this.navigateTo(DetailActivity::class,bundle)
+        this.navigateTo(DetailActivity::class, bundle)
     }
 }
