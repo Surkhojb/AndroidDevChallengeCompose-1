@@ -19,15 +19,14 @@ import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.unit.dp
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Surface
 import com.surkhojb.ktpuppy.data.PuppyRepository
+import com.surkhojb.ktpuppy.model.Puppy
+import com.surkhojb.ktpuppy.navigateTo
+import com.surkhojb.ktpuppy.openUrl
 import com.surkhojb.ktpuppy.ui.components.PuppyList
+import com.surkhojb.ktpuppy.ui.detail.DetailActivity
 import com.surkhojb.ktpuppy.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
@@ -37,19 +36,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
-                Surface(color = Color.LightGray){
-                    Text(
-                        modifier = Modifier
-                            .padding(16.dp)
-                            .background(Color.White),
-                        text = "All the dogs are real dogs in adoption from Spain.",
-                        style = MaterialTheme.typography.caption,
-                        fontStyle = FontStyle.Italic,
-                        color = Color.Black
-                    )
-                    PuppyList(PuppyRepository.getAll())
+                Surface(){
+                    PuppyList(PuppyRepository.getAll()){
+                        when(it.id){
+                            12345L,678910L,1112131415L -> { this.openUrl(it.contactUrl.toString())}
+                            else -> { navigateToDetail(it)}
+                        }
+                    }
                 }
             }
         }
+    }
+
+    private fun navigateToDetail(puppy: Puppy){
+        val bundle = Bundle()
+        bundle.putSerializable("puppy_key", puppy)
+        this.navigateTo(DetailActivity::class,bundle)
     }
 }

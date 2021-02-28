@@ -1,5 +1,7 @@
 package com.surkhojb.ktpuppy.model
 
+import java.io.Serializable
+
 data class Puppy(
     val id: Long,
     val name: String? = "",
@@ -9,7 +11,7 @@ data class Puppy(
     val breed: BreedType? = null,
     val description: String? = "",
     val contactUrl: String? = ""
-)
+): Serializable
 
 enum class GenderType {
     FEMALE,
