@@ -2,17 +2,20 @@
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/Surkhojb/AndroidDevChallengeCompose-1/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
-
+First app of [AndroidDevChallenge](https://android-developers.googleblog.com/2021/02/android-dev-challenge-lift-off-with.html) series
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
+As an Android Developer I always want to keep learning but I loved this challenge because
+I am a proud owner of two wonderful adopted dogs.
 
+I wanted to create this small app with real dogs in adoption from Spain.
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
